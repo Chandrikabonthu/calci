@@ -3,20 +3,20 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HeaderComponent } from './header/header.component';
-import { FooterComponent } from './footer/footer.component';
+
 import { BodyComponent } from './body/body.component';
-import { TopBarComponent } from './top-bar/top-bar.component';
-import { BottonBarComponent } from './botton-bar/botton-bar.component';
+
+import { TopbarComponent } from './topbar/topbar.component';
+import { BottombarComponent } from './bottombar/bottombar.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HeaderComponent,
-    FooterComponent,
+   
     BodyComponent,
-    TopBarComponent,
-    BottonBarComponent
+   
+    TopbarComponent,
+    BottombarComponent
   ],
   imports: [
     BrowserModule,
