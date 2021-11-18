@@ -1,4 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+/**
+ * @author Bonthu Chandrika
+ */
+ import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-topbar',

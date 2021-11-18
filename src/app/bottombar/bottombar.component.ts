@@ -1,3 +1,6 @@
+/**
+ * @author Bonthu Chandrika
+ */
 import { Component, OnInit } from '@angular/core';
 
 @Component({

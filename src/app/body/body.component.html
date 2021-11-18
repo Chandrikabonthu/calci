@@ -1,40 +1,45 @@
-<div class="card">
-    <div class="calc-head">
-      <input id="result" type="text">
+<!-- Body starts from here -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" 
+  integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" 
+  crossorigin="anonymous">
+    <!-- Displays the User Input -->
+    <div class="input-group input-group-sm col-sm-12 m-0 p-0">
+      <div class="col-sm-12 form-control text-lg-right" type="text">{{input}}</div>
     </div>
-    <div class="calc-body">
-      <div>
-        <input type="button" class="btn" value="C">
-        <input type="button" class="btn" value="+/-">
-        <input type="button" class="btn" value="%">
-        <input type="button" class="btn btn-another" value="/">
-      </div>
-  
-      <div>
-        <input type="button" class="btn" value="7">
-        <input type="button" class="btn" value="8">
-        <input type="button" class="btn" value="9">
-        <input type="button" class="btn btn-another" value="X">
-      </div>
-  
-      <div>
-        <input type="button" class="btn" value="4">
-        <input type="button" class="btn" value="5">
-        <input type="button" class="btn" value="6">
-        <input type="button" class="btn btn-another" value="-">
-      </div>
-  
-      <div>
-        <input type="button" class="btn" value="1">
-        <input type="button" class="btn" value="2">
-        <input type="button" class="btn" value="3">
-        <input type="button" class="btn btn-another" value="+">
-      </div>
-  
-      <div>
-        <input type="button" class="btn" value="0">
-        <input type="button" class="btn" value=".">
-        <input type="button" class="btn" value="DEL">
-        <input type="button" class="btn btn-equal" value="=">
-      </div>
-    </div ></div>
+ 
+    <!-- Displays the Results -->
+    <div class="input-group input-group-sm col-sm-12 m-0 p-0">
+      <div class="form-control text-sm-right" type="text">{{result}}</div>
+    </div>
+ 
+    <div class="col-sm-12 p-1 m-0">
+      <button class="btn btn-info col-sm-6" type="button" (click)="allClear()">C</button>
+      <button class="btn btn-danger col-sm-3" type="button" (click)="clear()">B</button>
+      <button class="btn btn-dark col-sm-3" type="button" (click)="pressOperator('/')">/</button>
+    </div>
+ 
+    <div class="col-sm-12 p-1 m-0">
+      <button class="btn btn-lg btn-outline-secondary col-sm-3 p-1" type="button" (click)="pressNum('7')">7</button>
+      <button class="btn btn-lg btn-outline-secondary col-sm-3 p-1" type="button" (click)="pressNum('8')">8</button>
+      <button class="btn btn-lg btn-outline-secondary col-sm-3 p-1" type="button" (click)="pressNum('9')">9</button>
+      <button class="btn btn-lg btn-dark col-sm-3 p-1" type="button" (click)="pressOperator('*')">X</button>
+    </div>
+    <div class="col-sm-12 p-1 m-0">
+      <button class="btn btn-lg btn-outline-secondary col-sm-3 p-1" type="button" (click)="pressNum('4')">4</button>
+      <button class="btn btn-lg btn-outline-secondary col-sm-3 p-1" type="button" (click)="pressNum('5')">5</button>
+      <button class="btn btn-lg btn-outline-secondary col-sm-3 p-1" type="button" (click)="pressNum('6')">6</button>
+      <button class="btn btn-lg btn-dark col-sm-3 p-1" type="button" (click)="pressOperator('-')">-</button>
+    </div>
+    <div class="col-sm-12 p-1 m-0">
+      <button class="btn btn-lg btn-outline-secondary col-sm-3 p-1" type="button" (click)="pressNum('1')">1</button>
+      <button class="btn btn-lg btn-outline-secondary col-sm-3 p-1" type="button" (click)="pressNum('2')">2</button>
+      <button class="btn btn-lg btn-outline-secondary col-sm-3 p-1" type="button" (click)="pressNum('3')">3</button>
+      <button class="btn btn-lg btn-dark col-sm-3 p-1" type="button" (click)="pressOperator('+')">+</button>
+    </div>
+    <div class="col-sm-12 p-1 m-0">
+      <button class="btn btn-lg btn-outline-secondary col-sm-3 p-1" type="button" (click)="pressNum('.')">.</button>
+      <button class="btn btn-lg btn-outline-secondary col-sm-3 p-1" type="button" (click)="pressNum('0')">0</button>
+      <button class="btn btn-lg btn-success col-sm-6 p-1" type="button" (click)="getAnswer()">=</button>
+    </div>
+
+ 

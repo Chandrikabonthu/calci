@@ -5,7 +5,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 Project Name : Calculator
 This project is about calculator using Angular
 We have created file structure and we can find files in src folder.
-we can build components in src/components.
+we can build components in src.
 
 ## Development server
 
